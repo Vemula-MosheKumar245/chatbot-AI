@@ -1,0 +1,109 @@
+/* App.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #d8b4fe, #93c5fd, #f9a8d4);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatbot-container {
+  width: 100%;
+  max-width: 700px;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease;
+}
+
+textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  resize: none;
+}
+
+textarea::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+button {
+  font-size: 1rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  color: white;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.4); /* purple ring */
+}
+
+.ask-btn {
+  background-color: #8b5cf6;
+}
+
+.ask-btn:hover {
+  background-color: #7c3aed;
+}
+
+.mic-btn {
+  background-color: #22c55e;
+}
+
+.mic-btn:hover {
+  background-color: #16a34a;
+}
+
+.stop-btn {
+  background-color: #ef4444;
+}
+
+.stop-btn:hover {
+  background-color: #dc2626;
+}
+
+.response {
+  background-color: #f3f4f6;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  max-height: 250px;
+  overflow-y: auto;
+  font-size: 1.05rem;
+}
+
+.centered-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
